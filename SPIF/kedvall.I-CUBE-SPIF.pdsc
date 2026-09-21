@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<package schemaVersion="1.7.7" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor>kedvall</vendor>
+    <name>I-CUBE-SPIF</name>
+    <description>SPI Flash Driver for STM32. Temporary fork of NimaLTD I-CUBE-SPIF 2.3.2 with the FreeRTOS.h include casing fixed so it builds on case-sensitive filesystems. Switch back to NimaLTD.I-CUBE-SPIF once https://github.com/nimaltd/spif/pull/55 is merged and released.</description>
+    <url>https://github.com/kedvall/STM32-PACK/raw/main/SPIF/</url>
+    <license>LICENSE.txt</license>
+    <releases>
+        <release date="2024-07-08" version="2.3.2">- Fixed SPIF_Read() offset. Fixed ISSI ID</release>
+        <release date="2024-03-09" version="2.3.0">- Added ThreadX Configuration</release>
+        <release date="2024-02-25" version="2.2.2">Fix compile error</release>
+        <release date="2024-01-31" version="2.2.1">update SPIF_WriteAddress()</release>
+        <release date="2023-12-24" version="2.2.0">Add SPIF_Transmit and SPIF_Receive </release>
+        <release date="2023-11-28" version="2.1.0">Support HAL_DMA
+Remove SPIF_Transmit</release>
+        <release date="2023-11-21" version="2.0.1">Remove SPIF_Receive
+Add check Page/Sector/Block index</release>
+        <release date="2023-11-20" version="2.0.0">- Rewrite Again
+- STM32CubeMx Pack</release>
+        <release date="2023-11-12" version="1.0.9">none</release>
+        <release date="2023-11-12" version="1.0.8">none</release>
+        <release date="2023-11-12" version="1.0.7">none</release>
+        <release date="2023-11-12" version="1.0.6">none</release>
+        <release date="2023-11-12" version="1.0.5">none</release>
+        <release date="2023-11-12" version="1.0.4">none</release>
+        <release date="2023-11-12" version="1.0.3">none</release>
+        <release date="2023-11-12" version="1.0.2">none</release>
+        <release date="2023-11-12" version="1.0.1">none</release>
+        <release date="2023-11-12" version="1.0.0">First Release</release>
+    </releases>
+    <keywords>
+        <keyword>IMPLEMENTED_WITH_STM32CUBEMX</keyword>
+        <keyword>CUBE_RULES_COMPLIANT</keyword>
+    </keywords>
+    <taxonomy>
+        <description Cclass="Driver">Driver</description>
+    </taxonomy>
+    <components>
+        <component Cclass="Driver" Cgroup="SPIF" Cversion="1.0.0" maxInstances="1">
+            <description>SPI Flash Driver</description>
+            <files>
+                <file category="source" name="Middlewares/Third_Party/SPIF/spif.c"/>
+                <file category="header" name="Middlewares/Third_Party/SPIF/spif.h"/>
+            </files>
+        </component>
+    </components>
+</package>
